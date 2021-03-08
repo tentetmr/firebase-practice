@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        タイトル
+        <input type="text" id="title" />
+      </div>
+
+      <div>
+        著者
+        <input type="text" id="author" />
+      </div>
+
+      <div>
+        カテゴリー
+        <input type="text" id="category" list="categoryList" />
+      </div>
+      <datalist id="categoryList">
+        <option value="ビジネス"></option>
+        <option value="IT"></option>
+        <option value="小説"></option>
+        <option value="学問"></option>
+        <option value="その他"></option>
+      </datalist>
+
+      <div>
+        ページ数
+        <input type="number" id="pages" min="1" />
+      </div>
+
+      <div>
+        感想
+        <textarea name="" id="notes" cols="30" rows="10"></textarea>
+      </div>
+
+      <div>
+        <button id="send">送信</button>
+      </div>
+
+      <table id="table">
+        <thead>
+          <tr>
+            <th>日時</th>
+            <th>カテゴリー</th>
+            <th>ページ</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+
+
+      <canvas id="myChart"></canvas>
+      <div>
+        <div id="output"></div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase.js"></script>
+    <!-- app.js -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>
