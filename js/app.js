@@ -57,7 +57,8 @@ newPostRef.on("child_added", function (data) {
     if(readingDatum["category"] === "IT"){
       // console.log(readingDatum["page"]);
       var readingPage = Number(readingDatum["page"]);
-      var readingTotal = 0;
+      var readingTotal = 0;　//毎回0で書き換えられている？
+
       readingTotal += readingPage;
       console.log(readingTotal);
     }
